@@ -18,7 +18,7 @@ public:
         
         for(auto i=(prices.begin()+1);i!=prices.end();++i){
             if(profit < *i - minPrice) profit = *i - minPrice;
-            if(minPrice < *i) minPrice = *i;            
+            if(minPrice > *i) minPrice = *i;            
         }
         
         return profit;
